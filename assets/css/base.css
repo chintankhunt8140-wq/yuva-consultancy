@@ -203,3 +203,7 @@ hr {
 
 /* === Page wrapper offset for fixed header === */
 .page-body { padding-top: var(--header-h); }
+
+.heading-white {
+    color: var(--clr-white);
+}
