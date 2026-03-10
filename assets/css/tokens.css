@@ -1,0 +1,163 @@
+/* ============================================================
+   YUVA CONSULTANCY
+   tokens.css — Design System Variables (Single Source of Truth)
+   ============================================================ */
+
+:root {
+  /* === Brand Colors === */
+  --clr-navy:        #0A1F4E;
+  --clr-navy-90:     #0D2560;
+  --clr-navy-80:     #112E72;
+  --clr-navy-70:     #163784;
+  --clr-navy-dark:   #071439;
+  --clr-navy-deeper: #040D24;
+
+  --clr-gold:        #C9982A;
+  --clr-gold-light:  #DDB040;
+  --clr-gold-bright: #F0C147;
+  --clr-gold-dark:   #A67C1A;
+  --clr-gold-muted:  #E5C97A;
+
+  --clr-white:       #FFFFFF;
+  --clr-off-white:   #F7F8FC;
+  --clr-surface:     #F0F2F8;
+
+  --clr-gray-50:     #F8F9FB;
+  --clr-gray-100:    #EEF0F7;
+  --clr-gray-200:    #DDE1EE;
+  --clr-gray-300:    #C5CAD9;
+  --clr-gray-400:    #9BA4BB;
+  --clr-gray-500:    #6B7591;
+  --clr-gray-600:    #4E5871;
+  --clr-gray-700:    #343D58;
+  --clr-gray-800:    #1E253A;
+  --clr-gray-900:    #0F1422;
+
+  --clr-success:     #16A34A;
+  --clr-error:       #DC2626;
+  --clr-wa:          #25D366;
+  --clr-wa-dark:     #128C7E;
+  --clr-call:        #2563EB;
+  --clr-call-dark:   #1D4ED8;
+
+  /* === Typography === */
+  --font-display:  'Playfair Display', Georgia, serif;
+  --font-body:     'Inter', system-ui, sans-serif;
+  --font-mono:     'JetBrains Mono', 'Courier New', monospace;
+
+  --fs-xs:    0.75rem;   /* 12px */
+  --fs-sm:    0.8125rem; /* 13px */
+  --fs-base:  0.9375rem; /* 15px */
+  --fs-md:    1rem;      /* 16px */
+  --fs-lg:    1.125rem;  /* 18px */
+  --fs-xl:    1.25rem;   /* 20px */
+  --fs-2xl:   1.5rem;    /* 24px */
+  --fs-3xl:   1.875rem;  /* 30px */
+  --fs-4xl:   2.25rem;   /* 36px */
+  --fs-5xl:   3rem;      /* 48px */
+  --fs-6xl:   3.75rem;   /* 60px */
+
+  --fw-light:   300;
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-semibold:600;
+  --fw-bold:    700;
+  --fw-extrabold:800;
+  --fw-black:   900;
+
+  --lh-tight:   1.2;
+  --lh-snug:    1.35;
+  --lh-normal:  1.6;
+  --lh-relaxed: 1.8;
+
+  --ls-tight:   -0.025em;
+  --ls-normal:  0;
+  --ls-wide:    0.05em;
+  --ls-wider:   0.1em;
+  --ls-widest:  0.15em;
+
+  /* === Spacing Scale (8pt grid) === */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  20px;
+  --sp-6:  24px;
+  --sp-7:  28px;
+  --sp-8:  32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-14: 56px;
+  --sp-16: 64px;
+  --sp-20: 80px;
+  --sp-24: 96px;
+  --sp-32: 128px;
+
+  /* === Border Radius === */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-2xl:32px;
+  --radius-full: 9999px;
+
+  /* === Shadows === */
+  --shadow-xs: 0 1px 3px rgba(10,31,78,0.06), 0 1px 2px rgba(10,31,78,0.04);
+  --shadow-sm: 0 2px 8px rgba(10,31,78,0.08), 0 1px 3px rgba(10,31,78,0.05);
+  --shadow-md: 0 4px 20px rgba(10,31,78,0.12), 0 2px 8px rgba(10,31,78,0.07);
+  --shadow-lg: 0 8px 40px rgba(10,31,78,0.16), 0 4px 16px rgba(10,31,78,0.1);
+  --shadow-xl: 0 16px 60px rgba(10,31,78,0.22), 0 8px 24px rgba(10,31,78,0.12);
+  --shadow-2xl:0 24px 80px rgba(10,31,78,0.28), 0 12px 32px rgba(10,31,78,0.15);
+  --shadow-gold: 0 4px 20px rgba(201,152,42,0.35);
+  --shadow-gold-lg: 0 8px 40px rgba(201,152,42,0.45);
+  --shadow-wa: 0 4px 18px rgba(37,211,102,0.4);
+  --shadow-call: 0 4px 18px rgba(37,99,235,0.4);
+
+  /* === Glassmorphism === */
+  --glass-bg:     rgba(255,255,255,0.08);
+  --glass-bg-md:  rgba(255,255,255,0.12);
+  --glass-bg-lg:  rgba(255,255,255,0.18);
+  --glass-border: rgba(255,255,255,0.15);
+  --glass-border-gold: rgba(201,152,42,0.3);
+  --blur-sm: blur(8px);
+  --blur-md: blur(16px);
+  --blur-lg: blur(24px);
+  --blur-xl: blur(40px);
+
+  /* === Transitions === */
+  --ease-out:   cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-in:    cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  --ease-inout: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring:cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-bounce:cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  --dur-fast:   0.15s;
+  --dur-normal: 0.3s;
+  --dur-slow:   0.5s;
+  --dur-slower: 0.7s;
+
+  --transition:       all var(--dur-normal) var(--ease-inout);
+  --transition-fast:  all var(--dur-fast) var(--ease-inout);
+  --transition-slow:  all var(--dur-slow) var(--ease-out);
+
+  /* === Layout === */
+  --max-width:     1240px;
+  --max-width-sm:  860px;
+  --max-width-xs:  640px;
+  --header-h:      80px;
+  --header-h-sm:   68px;
+  --section-py:    96px;
+  --section-py-sm: 64px;
+  --section-py-xs: 48px;
+
+  /* === Z-Index Scale === */
+  --z-below:   -1;
+  --z-base:     0;
+  --z-raised:   10;
+  --z-dropdown: 100;
+  --z-sticky:   500;
+  --z-fixed:    900;
+  --z-modal:    1000;
+  --z-toast:    1100;
+}
