@@ -1,10 +1,10 @@
 /* ============================================================
-   YUVA CONSULTANCY
-   tokens.css — Design System Variables (Single Source of Truth)
+   YUVA CONSULTANCY - FIXED VERSION
+   tokens.css — Design System Variables (Enhanced & Responsive)
    ============================================================ */
 
 :root {
-  /* === Brand Colors === */
+  /* === Brand Colors (Enhanced Contrast) === */
   --clr-navy:        #0A1F4E;
   --clr-navy-90:     #0D2560;
   --clr-navy-80:     #112E72;
@@ -12,10 +12,10 @@
   --clr-navy-dark:   #071439;
   --clr-navy-deeper: #040D24;
 
-  --clr-gold:        #C9982A;
-  --clr-gold-light:  #DDB040;
-  --clr-gold-bright: #F0C147;
-  --clr-gold-dark:   #A67C1A;
+  --clr-gold:        #D4A532;  /* Improved contrast */
+  --clr-gold-light:  #E8BC4A;
+  --clr-gold-bright: #F5CE58;
+  --clr-gold-dark:   #B38920;
   --clr-gold-muted:  #E5C97A;
 
   --clr-white:       #FFFFFF;
@@ -40,22 +40,23 @@
   --clr-call:        #2563EB;
   --clr-call-dark:   #1D4ED8;
 
-  /* === Typography === */
+  /* === Typography (Responsive) === */
   --font-display:  'Playfair Display', Georgia, serif;
-  --font-body:     'Inter', system-ui, sans-serif;
+  --font-body:     'Inter', system-ui, -apple-system, sans-serif;
   --font-mono:     'JetBrains Mono', 'Courier New', monospace;
 
-  --fs-xs:    0.75rem;   /* 12px */
-  --fs-sm:    0.8125rem; /* 13px */
-  --fs-base:  0.9375rem; /* 15px */
-  --fs-md:    1rem;      /* 16px */
-  --fs-lg:    1.125rem;  /* 18px */
-  --fs-xl:    1.25rem;   /* 20px */
-  --fs-2xl:   1.5rem;    /* 24px */
-  --fs-3xl:   1.875rem;  /* 30px */
-  --fs-4xl:   2.25rem;   /* 36px */
-  --fs-5xl:   3rem;      /* 48px */
-  --fs-6xl:   3.75rem;   /* 60px */
+  /* Base font sizes - will scale with viewport */
+  --fs-xs:    clamp(0.75rem, 2vw, 0.8125rem);   /* 12-13px */
+  --fs-sm:    clamp(0.8125rem, 2vw, 0.875rem);  /* 13-14px */
+  --fs-base:  clamp(0.9375rem, 2vw, 1rem);      /* 15-16px */
+  --fs-md:    clamp(1rem, 2vw, 1.125rem);       /* 16-18px */
+  --fs-lg:    clamp(1.125rem, 2.5vw, 1.25rem);  /* 18-20px */
+  --fs-xl:    clamp(1.25rem, 3vw, 1.5rem);      /* 20-24px */
+  --fs-2xl:   clamp(1.5rem, 4vw, 1.875rem);     /* 24-30px */
+  --fs-3xl:   clamp(1.875rem, 5vw, 2.25rem);    /* 30-36px */
+  --fs-4xl:   clamp(2.25rem, 6vw, 2.75rem);     /* 36-44px */
+  --fs-5xl:   clamp(2.5rem, 7vw, 3.5rem);       /* 40-56px */
+  --fs-6xl:   clamp(3rem, 8vw, 4.5rem);         /* 48-72px */
 
   --fw-light:   300;
   --fw-regular: 400;
@@ -68,7 +69,7 @@
   --lh-tight:   1.2;
   --lh-snug:    1.35;
   --lh-normal:  1.6;
-  --lh-relaxed: 1.8;
+  --lh-relaxed: 1.75;
 
   --ls-tight:   -0.025em;
   --ls-normal:  0;
@@ -76,41 +77,41 @@
   --ls-wider:   0.1em;
   --ls-widest:  0.15em;
 
-  /* === Spacing Scale (8pt grid) === */
-  --sp-1:  4px;
-  --sp-2:  8px;
-  --sp-3:  12px;
-  --sp-4:  16px;
-  --sp-5:  20px;
-  --sp-6:  24px;
-  --sp-7:  28px;
-  --sp-8:  32px;
-  --sp-10: 40px;
-  --sp-12: 48px;
-  --sp-14: 56px;
-  --sp-16: 64px;
-  --sp-20: 80px;
-  --sp-24: 96px;
-  --sp-32: 128px;
+  /* === Spacing Scale (8pt grid - responsive) === */
+  --sp-1:  clamp(4px, 1vw, 4px);
+  --sp-2:  clamp(8px, 1.5vw, 8px);
+  --sp-3:  clamp(12px, 2vw, 12px);
+  --sp-4:  clamp(16px, 2.5vw, 16px);
+  --sp-5:  clamp(20px, 3vw, 20px);
+  --sp-6:  clamp(24px, 3.5vw, 24px);
+  --sp-7:  clamp(28px, 4vw, 28px);
+  --sp-8:  clamp(32px, 4.5vw, 32px);
+  --sp-10: clamp(40px, 5vw, 40px);
+  --sp-12: clamp(48px, 6vw, 48px);
+  --sp-14: clamp(56px, 7vw, 56px);
+  --sp-16: clamp(64px, 8vw, 64px);
+  --sp-20: clamp(80px, 10vw, 80px);
+  --sp-24: clamp(96px, 12vw, 96px);
+  --sp-32: clamp(128px, 16vw, 128px);
 
   /* === Border Radius === */
   --radius-xs: 4px;
   --radius-sm: 8px;
   --radius-md: 12px;
-  --radius-lg: 18px;
+  --radius-lg: 16px;
   --radius-xl: 24px;
   --radius-2xl:32px;
   --radius-full: 9999px;
 
-  /* === Shadows === */
-  --shadow-xs: 0 1px 3px rgba(10,31,78,0.06), 0 1px 2px rgba(10,31,78,0.04);
-  --shadow-sm: 0 2px 8px rgba(10,31,78,0.08), 0 1px 3px rgba(10,31,78,0.05);
-  --shadow-md: 0 4px 20px rgba(10,31,78,0.12), 0 2px 8px rgba(10,31,78,0.07);
-  --shadow-lg: 0 8px 40px rgba(10,31,78,0.16), 0 4px 16px rgba(10,31,78,0.1);
-  --shadow-xl: 0 16px 60px rgba(10,31,78,0.22), 0 8px 24px rgba(10,31,78,0.12);
-  --shadow-2xl:0 24px 80px rgba(10,31,78,0.28), 0 12px 32px rgba(10,31,78,0.15);
-  --shadow-gold: 0 4px 20px rgba(201,152,42,0.35);
-  --shadow-gold-lg: 0 8px 40px rgba(201,152,42,0.45);
+  /* === Shadows (Enhanced) === */
+  --shadow-xs: 0 1px 3px rgba(10,31,78,0.08), 0 1px 2px rgba(10,31,78,0.05);
+  --shadow-sm: 0 2px 8px rgba(10,31,78,0.1), 0 1px 3px rgba(10,31,78,0.06);
+  --shadow-md: 0 4px 20px rgba(10,31,78,0.14), 0 2px 8px rgba(10,31,78,0.08);
+  --shadow-lg: 0 8px 40px rgba(10,31,78,0.18), 0 4px 16px rgba(10,31,78,0.12);
+  --shadow-xl: 0 16px 60px rgba(10,31,78,0.24), 0 8px 24px rgba(10,31,78,0.14);
+  --shadow-2xl:0 24px 80px rgba(10,31,78,0.3), 0 12px 32px rgba(10,31,78,0.16);
+  --shadow-gold: 0 4px 20px rgba(212,165,50,0.4);
+  --shadow-gold-lg: 0 8px 40px rgba(212,165,50,0.5);
   --shadow-wa: 0 4px 18px rgba(37,211,102,0.4);
   --shadow-call: 0 4px 18px rgba(37,99,235,0.4);
 
@@ -119,7 +120,7 @@
   --glass-bg-md:  rgba(255,255,255,0.12);
   --glass-bg-lg:  rgba(255,255,255,0.18);
   --glass-border: rgba(255,255,255,0.15);
-  --glass-border-gold: rgba(201,152,42,0.3);
+  --glass-border-gold: rgba(212,165,50,0.35);
   --blur-sm: blur(8px);
   --blur-md: blur(16px);
   --blur-lg: blur(24px);
@@ -141,15 +142,15 @@
   --transition-fast:  all var(--dur-fast) var(--ease-inout);
   --transition-slow:  all var(--dur-slow) var(--ease-out);
 
-  /* === Layout === */
-  --max-width:     1240px;
-  --max-width-sm:  860px;
-  --max-width-xs:  640px;
+  /* === Layout (Responsive) === */
+  --max-width:     min(1240px, 95vw);
+  --max-width-sm:  min(860px, 90vw);
+  --max-width-xs:  min(640px, 85vw);
   --header-h:      80px;
-  --header-h-sm:   68px;
-  --section-py:    96px;
-  --section-py-sm: 64px;
-  --section-py-xs: 48px;
+  --header-h-sm:   64px;
+  --section-py:    clamp(64px, 12vw, 96px);
+  --section-py-sm: clamp(48px, 10vw, 64px);
+  --section-py-xs: clamp(32px, 8vw, 48px);
 
   /* === Z-Index Scale === */
   --z-below:   -1;
@@ -160,4 +161,43 @@
   --z-fixed:    900;
   --z-modal:    1000;
   --z-toast:    1100;
+
+  /* === Touch Targets (Accessibility) === */
+  --touch-target-min: 44px;
+  --input-height: 48px;
+  --button-height-sm: 40px;
+  --button-height-md: 48px;
+  --button-height-lg: 56px;
+}
+
+/* === Media Query Breakpoints === */
+@media (max-width: 1024px) {
+  :root {
+    --header-h: var(--header-h-sm);
+    --section-py: var(--section-py-sm);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-h: 64px;
+    --section-py: var(--section-py-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --header-h: 56px;
+    --section-py: var(--section-py-xs);
+  }
+}
+
+/* === Reduced Motion Support === */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0.01ms;
+    --dur-normal: 0.01ms;
+    --dur-slow: 0.01ms;
+    --dur-slower: 0.01ms;
+  }
 }
