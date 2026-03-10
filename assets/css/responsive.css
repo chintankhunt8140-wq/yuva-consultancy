@@ -316,6 +316,14 @@ a, button, input, select, textarea {
     display: none !important;
   }
 
+  .mobile-sticky-cta {
+    display: flex;
+  }
+
+  body {
+    padding-bottom: 88px;
+  }
+
   .float-action-btn {
     width: 56px;
     height: 56px;

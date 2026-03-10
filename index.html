@@ -1,38 +1,32 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <meta name="theme-color" content="#0A1F4E" />
-
-  <!-- SEO -->
-  <title>Yuva Consultancy | Business Registration & Compliance Experts | Surat</title>
-  <meta name="description" content="Yuva Consultancy offers professional company registration, IEC, FSSAI, ISO certification, international company setup and import-export consulting in Surat, India. 1000+ businesses assisted." />
-  <meta name="keywords" content="company registration Surat, IEC registration, FSSAI certification, ISO certification, business registration India, import export consultant Surat, Yuva Consultancy" />
-  <meta name="author" content="Yuva Consultancy" />
+  <title>Yuva Consultancy | IEC, FSSAI, ISO & Export Compliance Experts</title>
+  <meta name="description" content="Premium consultancy for IEC Registration Services, FSSAI Registration Consultant support, Export Import License India, ISO Certification Services, and international company registration." />
+  <meta name="keywords" content="IEC Registration Services, FSSAI Registration Consultant, Export Import License India, ISO Certification Services, RCMC registration, ICEGATE registration, AD Code registration" />
   <meta name="robots" content="index, follow" />
-
-  <!-- Open Graph -->
-  <meta property="og:type"        content="website" />
-  <meta property="og:title"       content="Yuva Consultancy | Business Registration Experts" />
-  <meta property="og:description" content="Professional Company Registration & Compliance Consulting. 1000+ Businesses Assisted. IEC, FSSAI, ISO, International Company Setup." />
-  <meta property="og:url"         content="https://yuvaconsultancy.com/" />
-  <meta property="og:site_name"   content="Yuva Consultancy" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="Yuva Consultancy | Business Registration Experts" />
-  <meta name="twitter:description" content="Professional Company Registration & Compliance Consulting in Surat. 1000+ Businesses Assisted." />
-
-  <!-- Canonical -->
   <link rel="canonical" href="https://yuvaconsultancy.com/" />
 
-  <!-- Favicon placeholder -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230A1F4E'/><text y='.9em' font-size='70' font-family='Arial' font-weight='900' fill='%23C9982A' text-anchor='middle' x='50'>Y</text></svg>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Yuva Consultancy | Export & Business Compliance Experts" />
+  <meta property="og:description" content="Start your export business with expert compliance support: IEC, FSSAI, ISO, DSC, and international company setup." />
+  <meta property="og:url" content="https://yuvaconsultancy.com/" />
+  <meta property="og:site_name" content="Yuva Consultancy" />
+  <meta property="og:image" content="https://yuvaconsultancy.com/assets/images/logo.png" />
+  <meta property="og:locale" content="en_IN" />
 
-  <!-- CSS — load tokens first, then layers -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Yuva Consultancy | Export & Business Compliance Experts" />
+  <meta name="twitter:description" content="IEC Registration Services, FSSAI Registration Consultant support, ISO Certification Services and global company setup." />
+  <meta name="twitter:image" content="https://yuvaconsultancy.com/assets/images/logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" type="image/png" href="/assets/images/logo.png" />
+
   <link rel="stylesheet" href="assets/css/tokens.css" />
   <link rel="stylesheet" href="assets/css/base.css" />
   <link rel="stylesheet" href="assets/css/animations.css" />
@@ -42,20 +36,54 @@
   <link rel="stylesheet" href="assets/css/sections.css" />
   <link rel="stylesheet" href="assets/css/responsive.css" />
 
-  <!-- Page-specific inline styles -->
   <style>
-    .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: var(--sp-6); }
-    .mt-neg { margin-top: -48px; }
-    .navbar-cta-wrap { margin-left: var(--sp-4); }
+    .premium-hero { background: linear-gradient(170deg, #f7f9ff 0%, #ffffff 60%, #f8f5ee 100%); }
+    .hero-title { max-width: 18ch; }
+    .hero-kpis { display:grid; grid-template-columns: repeat(3,1fr); gap:var(--sp-3); margin-top:var(--sp-6); }
+    .hero-kpi { background:#fff; border:1px solid var(--clr-gray-200); padding:var(--sp-4); border-radius:var(--radius-lg); box-shadow:var(--shadow-sm); }
+    .hero-kpi strong { display:block; color:var(--clr-navy); font-size:var(--fs-xl); }
+
+    .service-group { margin-top:var(--sp-10); }
+    .service-group h3 { margin-bottom:var(--sp-5); font-size:var(--fs-xl); }
+    .service-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:var(--sp-5); }
+    .service-mini-card { background:#fff; border:1px solid var(--clr-gray-200); border-radius:var(--radius-xl); padding:var(--sp-6); box-shadow:var(--shadow-sm); transition:var(--transition); }
+    .service-mini-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-lg); border-color:rgba(201,152,42,.35); }
+    .service-mini-card .icon { font-size:1.4rem; margin-bottom:var(--sp-3); }
+
+    .timeline-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:var(--sp-4); }
+    .timeline-step { background:#fff; border:1px solid var(--clr-gray-200); border-radius:var(--radius-xl); padding:var(--sp-6); text-align:center; }
+    .timeline-step .num { width:36px;height:36px;border-radius:50%;display:grid;place-items:center;margin:0 auto var(--sp-3);background:var(--clr-navy);color:#fff;font-weight:700; }
+
+    .logo-strip { display:grid; grid-template-columns:repeat(5,1fr); gap:var(--sp-3); margin-top:var(--sp-6); }
+    .logo-pill { background:#fff; border:1px solid var(--clr-gray-200); border-radius:var(--radius-lg); padding:var(--sp-3); text-align:center; color:var(--clr-gray-500); font-weight:600; }
+
+    .why-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:var(--sp-4); }
+    .why-item { background:#fff; border:1px solid var(--clr-gray-200); border-radius:var(--radius-lg); padding:var(--sp-5); }
+
+    .cta-panel { border-radius:var(--radius-2xl); padding:var(--sp-12); background:linear-gradient(120deg,#0A1F4E,#123173); color:#fff; }
+    .cta-actions { display:flex; flex-wrap:wrap; gap:var(--sp-3); margin-top:var(--sp-5); }
+
+    @media (max-width:1024px){
+      .service-grid{grid-template-columns:repeat(2,1fr)}
+      .timeline-grid{grid-template-columns:repeat(2,1fr)}
+      .logo-strip{grid-template-columns:repeat(3,1fr)}
+      .why-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:768px){
+      .hero-kpis{grid-template-columns:1fr}
+      .service-grid,.timeline-grid,.why-grid,.logo-strip{grid-template-columns:1fr}
+      .cta-panel{padding:var(--sp-8)}
+    }
   </style>
 
-  <!-- Structured Data (LocalBusiness) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "ProfessionalService",
     "name": "Yuva Consultancy",
-    "description": "Professional business registration, compliance, and international company setup consulting in Surat, India.",
+    "url": "https://yuvaconsultancy.com/",
+    "description": "Consultancy for IEC Registration Services, FSSAI Registration Consultant support, Export Import License India and ISO Certification Services.",
+    "telephone": "+919099665509",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "A-502 Pragati IT Park, Near AR Mall, Mota Varachha",
@@ -63,33 +91,18 @@
       "addressRegion": "Gujarat",
       "postalCode": "394105",
       "addressCountry": "IN"
-    },
-    "telephone": "+919099665509",
-    "openingHours": "Mo-Sa 09:00-18:00",
-    "priceRange": "₹₹",
-    "url": "https://yuvaconsultancy.com"
+    }
   }
   </script>
 </head>
 <body>
-
-<!-- Scroll Progress -->
 <div id="scroll-progress"></div>
 
-<!-- ══════════════════════════════════════════
-     HEADER
-══════════════════════════════════════════ -->
 <header class="site-header" role="banner">
   <div class="container header-inner">
-
-    <!-- Logo -->
-    <a href="/" class="site-logo" aria-label="Yuva Consultancy – Home">
-      <div class="logo-text-group">
-        <img src="/assets/images/logo.png" alt="logo">
-      </div>
+    <a href="/" class="site-logo" aria-label="Yuva Consultancy Home">
+      <div class="logo-text-group"><img src="/assets/images/logo.png" alt="Yuva Consultancy logo" width="180" height="56" decoding="async" /></div>
     </a>
-
-    <!-- Desktop Nav -->
     <nav class="main-nav" aria-label="Primary Navigation">
       <a href="/" class="nav-link" data-nav-link>Home</a>
       <a href="/about/" class="nav-link" data-nav-link>About</a>
@@ -100,784 +113,207 @@
       <a href="/blog/" class="nav-link" data-nav-link>Blog</a>
       <a href="/contact/" class="nav-link" data-nav-link>Contact</a>
     </nav>
-
-    <!-- Actions -->
     <div class="header-actions">
-      <a href="tel:+919099665509" class="header-call-btn" aria-label="Call Yuva Consultancy">
-        <span>📞</span>
-        <span class="btn-text">+91 9099665509</span>
-      </a>
-      <a href="#" data-wa class="header-wa-btn" aria-label="WhatsApp Chat">
-        <span>💬</span>
-        <span class="btn-text">WhatsApp</span>
-      </a>
-      <button
-        id="hamburger-btn"
-        class="hamburger-btn"
-        aria-label="Toggle Navigation Menu"
-        aria-expanded="false"
-        aria-controls="mobile-nav"
-      >
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
+      <a href="tel:+919099665509" class="header-call-btn" aria-label="Call Yuva Consultancy"><span>📞</span><span class="btn-text">+91 9099665509</span></a>
+      <a href="#" data-wa class="header-wa-btn" aria-label="WhatsApp Chat"><span>💬</span><span class="btn-text">WhatsApp</span></a>
+      <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
       </button>
     </div>
   </div>
 </header>
 
-<!-- Mobile Nav Drawer -->
 <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile Navigation">
-  <a href="/"                                    class="mobile-nav-link" data-nav-link>🏠 Home</a>
-  <a href="/about/"                              class="mobile-nav-link" data-nav-link>🏢 About Us</a>
-  <a href="/services/"                           class="mobile-nav-link" data-nav-link>📋 Services</a>
-  <a href="/international-company-registration/" class="mobile-nav-link" data-nav-link>🌍 International Registration</a>
-  <a href="/import-export-services/"             class="mobile-nav-link" data-nav-link>🚢 Import &amp; Export</a>
-  <a href="/iso-certification/"                  class="mobile-nav-link" data-nav-link>🏆 ISO Certification</a>
-  <a href="/blog/"                               class="mobile-nav-link" data-nav-link>📰 Knowledge Blog</a>
-  <a href="/contact/"                            class="mobile-nav-link" data-nav-link>📍 Contact Us</a>
+  <a href="/" class="mobile-nav-link" data-nav-link>🏠 Home</a>
+  <a href="/about/" class="mobile-nav-link" data-nav-link>🏢 About</a>
+  <a href="/services/" class="mobile-nav-link" data-nav-link>📋 Services</a>
+  <a href="/international-company-registration/" class="mobile-nav-link" data-nav-link>🌍 International</a>
+  <a href="/import-export-services/" class="mobile-nav-link" data-nav-link>🚢 Import &amp; Export</a>
+  <a href="/iso-certification/" class="mobile-nav-link" data-nav-link>🏆 ISO</a>
+  <a href="/blog/" class="mobile-nav-link" data-nav-link>📰 Blog</a>
+  <a href="/contact/" class="mobile-nav-link" data-nav-link>📍 Contact</a>
   <div class="mobile-nav-actions">
     <a href="tel:+919099665509" class="btn btn-call btn-sm">📞 Call Now</a>
     <a href="#" data-wa class="btn btn-wa btn-sm">💬 WhatsApp</a>
   </div>
 </nav>
 
-<!-- ══════════════════════════════════════════
-     HERO SECTION
-══════════════════════════════════════════ -->
 <main>
-<section class="hero page-body" id="home" aria-labelledby="hero-heading">
-  <!-- Floating decorative shapes -->
-  <div class="hero-shape hero-shape-1" aria-hidden="true"></div>
-  <div class="hero-shape hero-shape-2" aria-hidden="true"></div>
-  <div class="hero-shape hero-shape-3" aria-hidden="true"></div>
-  <div class="hero-shape hero-shape-4" aria-hidden="true"></div>
-
-  <div class="container hero-inner">
-    <div class="hero-grid">
-
-      <!-- LEFT: Content -->
-      <div class="hero-content">
-        <div class="hero-eyebrow" aria-label="Trusted Business Consultants">
-          🇮🇳 &nbsp;India's Trusted Business Consultants
-        </div>
-
-        <h1 class="hero-title" id="hero-heading">
-          Start Your Business &amp;<br>
-          <span class="accent">Export Globally</span>
-        </h1>
-
-        <p class="hero-subtitle">
-          Professional Company Registration &amp; Compliance Experts — helping businesses grow legally, globally, and confidently.
-        </p>
-
-        <ul class="hero-bullets" aria-label="Key Services">
-          <li class="hero-bullet">
-            <span class="bullet-check" aria-hidden="true">✓</span>
-            IEC &amp; Import Export Setup
-          </li>
-          <li class="hero-bullet">
-            <span class="bullet-check" aria-hidden="true">✓</span>
-            FSSAI &amp; ISO Certification
-          </li>
-          <li class="hero-bullet">
-            <span class="bullet-check" aria-hidden="true">✓</span>
-            International Company Registration
-          </li>
-        </ul>
-
-        <div class="hero-cta">
-          <a href="tel:+919099665509" class="btn btn-primary btn-lg" id="hero-call-btn">
-            📞 Call Now
-          </a>
-          <a href="#" data-wa class="btn btn-wa btn-lg" id="hero-wa-btn">
-            💬 WhatsApp Consultation
-          </a>
-        </div>
-
-        <div class="hero-trust" role="region" aria-label="Client Trust Indicators">
-          <div class="hero-trust-avatars" aria-hidden="true">
-            <div class="hero-trust-avatar">RP</div>
-            <div class="hero-trust-avatar">MS</div>
-            <div class="hero-trust-avatar">PD</div>
-            <div class="hero-trust-avatar">AK</div>
+  <section class="hero page-body premium-hero" aria-labelledby="hero-heading">
+    <div class="container hero-inner">
+      <div class="hero-grid">
+        <div class="hero-content" data-reveal="fade-up">
+          <div class="hero-eyebrow">Trusted Compliance &amp; Registration Consultants</div>
+          <h1 class="hero-title" id="hero-heading">Start Your Export Business With Expert Compliance Support</h1>
+          <p class="hero-subtitle">We help businesses with IEC, FSSAI, ISO, and global company registrations through a clear, fast, and compliant process.</p>
+          <div class="hero-cta">
+            <a href="#consultation-form" class="btn btn-primary btn-lg">Get Free Consultation</a>
+            <a href="#" data-wa class="btn btn-wa btn-lg">WhatsApp Now</a>
           </div>
-          <p class="hero-trust-text">
-            Trusted by <strong>1000+</strong> businesses across India &amp; globally
-          </p>
+          <div class="hero-kpis" aria-label="Trust statistics">
+            <div class="hero-kpi"><strong>1000+</strong>Registrations Completed</div>
+            <div class="hero-kpi"><strong>500+</strong>Happy Clients</div>
+            <div class="hero-kpi"><strong>10+</strong>Years Experience</div>
+          </div>
         </div>
-      </div>
-
-      <!-- RIGHT: Lead Form -->
-      <div class="hero-form-card" role="complementary" aria-label="Free Consultation Form">
-        <div class="form-card-header">
-          <span class="icon" aria-hidden="true">🚀</span>
-          <h2 class="heading-white">Get Free Consultation</h2>
-          <p>Fill in your details – our expert will call you within 24 hours.</p>
-        </div>
-
-        <form
-          id="hero-form"
-          class="js-contact-form js-validate"
-          action="https://formsubmit.co/ronakbhimani6480@gmail.com"
-          method="POST"
-          novalidate
-        >
-          <!-- FormSubmit hidden config -->
-          <input type="hidden" name="_subject"  value="New Consultation Request – Yuva Consultancy" />
-          <input type="hidden" name="_captcha"  value="false" />
-          <input type="hidden" name="_template" value="table" />
-
-          <div class="form-group">
-            <label class="form-label" for="h-name">Full Name <span aria-hidden="true" style="color:#C9982A;">*</span></label>
-            <input
-              class="form-control" type="text" id="h-name"
-              name="Full Name" placeholder="e.g. Ramesh Patel"
-              required autocomplete="name"
-            />
-            <span class="form-error" role="alert" aria-live="polite"></span>
+        <aside class="hero-form-card" aria-label="Free Consultation Form" data-reveal="fade-up" id="consultation-form">
+          <div class="form-card-header">
+            <h2 class="heading-white">Book Your Free Consultation</h2>
+            <p>Tell us your requirement and our expert team will call you within 24 hours.</p>
           </div>
-
-          <div class="form-group">
-            <label class="form-label" for="h-phone">Phone Number <span aria-hidden="true" style="color:#C9982A;">*</span></label>
-            <input
-              class="form-control" type="tel" id="h-phone"
-              name="Phone Number" placeholder="+91 98765 43210"
-              required autocomplete="tel"
-            />
-            <span class="form-error" role="alert" aria-live="polite"></span>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="h-email">Email Address</label>
-            <input
-              class="form-control" type="email" id="h-email"
-              name="Email" placeholder="your@email.com"
-              autocomplete="email"
-            />
-            <span class="form-error" role="alert" aria-live="polite"></span>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="h-service">Service Needed <span aria-hidden="true" style="color:#C9982A;">*</span></label>
-            <div class="form-select-wrap">
-              <select class="form-control" id="h-service" name="Service Needed" required>
-                <option value="" disabled selected>Select a service…</option>
-                <optgroup label="Business Registration">
-                  <option>FSSAI Registration</option>
-                  <option>DSC Digital Signature</option>
-                  <option>IEC Registration</option>
-                  <option>RCMC Registration</option>
-                  <option>ICEGATE Registration</option>
-                  <option>Port Registration</option>
-                  <option>AD Code Registration</option>
-                  <option>IFSC Registration</option>
-                  <option>ISO Certification</option>
-                </optgroup>
-                <optgroup label="International Company Setup">
-                  <option>USA Company Registration</option>
-                  <option>UK Company Registration</option>
-                  <option>Dubai Company Registration</option>
-                  <option>Canada Company Registration</option>
-                  <option>Australia Company Registration</option>
-                  <option>Hong Kong Company Registration</option>
-                </optgroup>
-                <option>Other</option>
+          <form class="js-contact-form js-validate" action="https://formsubmit.co/ronakbhimani6480@gmail.com" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="New Consultation Request – Yuva Consultancy" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <div class="form-group"><label class="form-label" for="name">Name</label><input id="name" class="form-control" name="Full Name" required autocomplete="name" /><span class="form-error" role="alert" aria-live="polite"></span></div>
+            <div class="form-group"><label class="form-label" for="phone">Phone</label><input id="phone" type="tel" class="form-control" name="Phone Number" required autocomplete="tel" /><span class="form-error" role="alert" aria-live="polite"></span></div>
+            <div class="form-group"><label class="form-label" for="email">Email</label><input id="email" type="email" class="form-control" name="Email" autocomplete="email" /><span class="form-error" role="alert" aria-live="polite"></span></div>
+            <div class="form-group"><label class="form-label" for="service">Service Needed</label>
+              <select class="form-control" id="service" name="Service Needed" required>
+                <option value="" selected disabled>Select Service</option>
+                <option>IEC Registration</option><option>FSSAI Registration</option><option>RCMC Registration</option><option>ICEGATE Registration</option><option>AD Code Registration</option><option>Port Registration</option><option>Digital Signature (DSC)</option><option>ISO Certification</option><option>Phytosanitary Registration</option><option>USA Company Registration</option><option>UK Company Registration</option><option>Dubai Company Registration</option>
               </select>
+              <span class="form-error" role="alert" aria-live="polite"></span>
             </div>
-            <span class="form-error" role="alert" aria-live="polite"></span>
-          </div>
-
-          <button type="submit" class="form-submit-btn" id="hero-submit-btn">
-            🚀 Get Free Consultation
-          </button>
-
-          <div class="form-alert alert" id="hero-form-alert" role="alert" aria-live="assertive"></div>
-
-          <p class="form-privacy" aria-label="Privacy Notice">
-            🔒 Your information is 100% secure &amp; confidential
-          </p>
-        </form>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════
-     STATS BAR
-══════════════════════════════════════════ -->
-<section class="section section-light" aria-labelledby="stats-heading" style="padding-top:0;padding-bottom:var(--sp-16);">
-  <div class="container">
-    <h2 class="sr-only" id="stats-heading">Our Track Record</h2>
-    <div class="stats-strip mt-neg" data-reveal="scale-in">
-      <div class="stat-item">
-        <span class="stat-num" data-count="1000" data-suffix="+">0+</span>
-        <p class="stat-label">Businesses Assisted</p>
-      </div>
-      <div class="stat-item">
-        <span class="stat-num" data-count="8" data-suffix="+">0+</span>
-        <p class="stat-label">Years Experience</p>
-      </div>
-      <div class="stat-item">
-        <span class="stat-num" data-count="24" data-suffix="hr">0hr</span>
-        <p class="stat-label">Client Support</p>
-      </div>
-      <div class="stat-item">
-        <span class="stat-num" data-count="500" data-suffix="+">0+</span>
-        <p class="stat-label">Registrations Completed</p>
+            <button type="submit" class="form-submit-btn">Get Free Consultation</button>
+            <div class="form-alert alert" role="alert" aria-live="assertive"></div>
+          </form>
+        </aside>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ══════════════════════════════════════════
-     SERVICES SECTION
-══════════════════════════════════════════ -->
-<section class="section" id="services" aria-labelledby="services-heading">
-  <div class="container">
-    <div class="text-center" data-reveal="fade-up">
-      <span class="section-eyebrow">⭐ What We Offer</span>
-      <h2 class="section-heading" id="services-heading">Our Expert Services</h2>
-      <span class="gold-rule"></span>
-      <p class="section-subheading">Comprehensive business registration, certification &amp; compliance services to help your business grow legally and confidently in India and globally.</p>
-    </div>
-
-    <div class="services-grid" data-stagger="80">
-
-      <article class="service-card card-top-accent" data-reveal="fade-up">
-        <div class="service-icon-wrap" aria-hidden="true">🍽️</div>
-        <h3 class="h4">FSSAI Registration</h3>
-        <p>Get your Food Safety &amp; Standards Authority license quickly. Basic, State &amp; Central FSSAI licensing.</p>
-        <a href="/services/" class="service-card-link" data-reveal>Learn More →</a>
-      </article>
-
-      <article class="service-card card-top-accent" data-reveal="fade-up">
-        <div class="service-icon-wrap" aria-hidden="true">🔏</div>
-        <h3 class="h4">DSC Digital Signature</h3>
-        <p>Class 3 Digital Signature Certificates for company registration, GST filing &amp; e-tendering.</p>
-        <a href="/services/" class="service-card-link">Learn More →</a>
-      </article>
-
-      <article class="service-card card-top-accent" data-reveal="fade-up">
-        <div class="service-icon-wrap" aria-hidden="true">🚢</div>
-        <h3 class="h4">IEC Registration</h3>
-        <p>Import Export Code registration to legally trade goods across international borders via DGFT.</p>
-        <a href="/import-export-services/" class="service-card-link">Learn More →</a>
-      </article>
-
-      <article class="service-card card-top-accent" data-reveal="fade-up">
-        <div class="service-icon-wrap" aria-hidden="true">📜</div>
-        <h3 class="h4">RCMC Registration</h3>
-        <p>Registration Cum Membership Certificate to avail export benefits, incentives &amp; duty drawbacks.</p>
-        <a href="/services/" class="service-card-link">Learn More →</a>
-      </article>
-
-      <article class="service-card card-top-accent" data-reveal="fade-up">
-        <div class="service-icon-wrap" aria-hidden="true">🖥️</div>
-        <h3 class="h4">ICEGATE Registration</h3>
-        <p>Indian Customs Electronic Gateway registration for seamless customs clearance &amp; shipping bill filing.</p>
-        <a href="/services/" class="service-card-link">Learn More →</a>
-      </article>
-
-      <article class="service-card card-top-accent" data-reveal="fade-up">
-        <div class="service-icon-wrap" aria-hidden="true">⚓</div>
-        <h3 class="h4">Port Registration</h3>
-        <p>Register with port authorities at Mundra, JNPT, Hazira &amp; other ports for seamless export operations.</p>
-        <a href="/import-export-services/" class="service-card-link">Learn More →</a>
-      </article>
-
-      <article class="service-card card-top-accent" data-reveal="fade-up">
-        <div class="service-icon-wrap" aria-hidden="true">🏦</div>
-        <h3 class="h4">AD Code Registration</h3>
-        <p>Authorized Dealer Code registration required for all customs shipping bills and foreign exchange transactions.</p>
-        <a href="/services/" class="service-card-link">Learn More →</a>
-      </article>
-
-      <article class="service-card card-top-accent" data-reveal="fade-up">
-        <div class="service-icon-wrap" aria-hidden="true">💳</div>
-        <h3 class="h4">IFSC Registration</h3>
-        <p>Indian Financial System Code setup for seamless RTGS/NEFT transfers and export remittance accounts.</p>
-        <a href="/services/" class="service-card-link">Learn More →</a>
-      </article>
-
-      <article class="service-card card-top-accent" data-reveal="fade-up">
-        <div class="service-icon-wrap" aria-hidden="true">🏆</div>
-        <h3 class="h4">ISO Certificates</h3>
-        <p>ISO 9001, 14001, 22000 and other international quality management certifications with full audit support.</p>
-        <a href="/iso-certification/" class="service-card-link">Learn More →</a>
-      </article>
-
-    </div>
-
-    <div class="text-center" style="margin-top:var(--sp-12);" data-reveal="fade-up">
-      <a href="/services/" class="btn btn-navy btn-lg">Explore All Services →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════
-     INTERNATIONAL COMPANY SETUP
-══════════════════════════════════════════ -->
-<section class="section section-light" id="international" aria-labelledby="intl-heading">
-  <div class="container">
-    <div class="text-center" data-reveal="fade-up">
-      <span class="section-eyebrow">🌍 Go Global</span>
-      <h2 class="section-heading" id="intl-heading">International Company Setup</h2>
-      <span class="gold-rule"></span>
-      <p class="section-subheading">Register your company in leading global jurisdictions. We handle the entire remote incorporation process.</p>
-    </div>
-
-    <div class="countries-grid" data-stagger="80">
-      <div class="country-card" data-reveal="scale-in">
-        <span class="country-flag" aria-label="United States">🇺🇸</span>
-        <h3 class="h4" style="font-size:var(--fs-md);">USA Company</h3>
-        <p>LLC &amp; Corporation</p>
+  <section class="section" aria-labelledby="services-heading">
+    <div class="container">
+      <div class="text-center" data-reveal="fade-up">
+        <span class="section-eyebrow">Premium Services</span>
+        <h2 class="section-heading" id="services-heading">End-to-End Registration &amp; Compliance Services</h2>
+        <p class="section-subheading">Conversion-focused consultancy support for exporters, manufacturers, and growth-stage businesses.</p>
       </div>
-      <div class="country-card" data-reveal="scale-in">
-        <span class="country-flag" aria-label="United Kingdom">🇬🇧</span>
-        <h3 class="h4" style="font-size:var(--fs-md);">UK Company</h3>
-        <p>Private Limited</p>
-      </div>
-      <div class="country-card" data-reveal="scale-in">
-        <span class="country-flag" aria-label="United Arab Emirates">🇦🇪</span>
-        <h3 class="h4" style="font-size:var(--fs-md);">Dubai Company</h3>
-        <p>Freezone &amp; Mainland</p>
-      </div>
-      <div class="country-card" data-reveal="scale-in">
-        <span class="country-flag" aria-label="Canada">🇨🇦</span>
-        <h3 class="h4" style="font-size:var(--fs-md);">Canada Company</h3>
-        <p>Inc &amp; Corp</p>
-      </div>
-      <div class="country-card" data-reveal="scale-in">
-        <span class="country-flag" aria-label="Australia">🇦🇺</span>
-        <h3 class="h4" style="font-size:var(--fs-md);">Australia Company</h3>
-        <p>Pty Ltd</p>
-      </div>
-      <div class="country-card" data-reveal="scale-in">
-        <span class="country-flag" aria-label="Hong Kong">🇭🇰</span>
-        <h3 class="h4" style="font-size:var(--fs-md);">Hong Kong Company</h3>
-        <p>Private Limited</p>
-      </div>
-    </div>
 
-    <div class="text-center" style="margin-top:var(--sp-12);" data-reveal="fade-up">
-      <a href="/international-company-registration/" class="btn btn-primary btn-lg">Explore International Services →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════
-     3-STEP PROCESS
-══════════════════════════════════════════ -->
-<section class="section" id="process" aria-labelledby="process-heading">
-  <div class="container">
-    <div class="text-center" data-reveal="fade-up">
-      <span class="section-eyebrow">⚡ How We Work</span>
-      <h2 class="section-heading" id="process-heading">Our Simple 3 Step Process</h2>
-      <span class="gold-rule"></span>
-      <p class="section-subheading">We make business registration effortless. From consultation to certificate — we handle everything.</p>
-    </div>
-
-    <div class="process-grid">
-      <div class="process-step-card" data-reveal="fade-up" data-delay="100">
-        <div class="step-num" aria-label="Step 1">1</div>
-        <div style="font-size:1.8rem;margin-bottom:var(--sp-3);" aria-hidden="true">💬</div>
-        <h3 class="step-title">Free Consultation</h3>
-        <p class="step-desc">Share your requirements with our experts. We analyse your needs and recommend the best registration strategy — completely free of charge.</p>
-      </div>
-      <div class="process-step-card" data-reveal="fade-up" data-delay="250">
-        <div class="step-num" aria-label="Step 2">2</div>
-        <div style="font-size:1.8rem;margin-bottom:var(--sp-3);" aria-hidden="true">📄</div>
-        <h3 class="step-title">Document Submission</h3>
-        <p class="step-desc">Our team guides you through precise document collection and preparation. We handle all government form filings and digital submissions on your behalf.</p>
-      </div>
-      <div class="process-step-card" data-reveal="fade-up" data-delay="400">
-        <div class="step-num" aria-label="Step 3">3</div>
-        <div style="font-size:1.8rem;margin-bottom:var(--sp-3);" aria-hidden="true">✅</div>
-        <h3 class="step-title">Registration Complete</h3>
-        <p class="step-desc">Receive your registration certificates, licenses or compliance approvals with full post-registration support and guidance for future needs.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════
-     TRUST BADGES
-══════════════════════════════════════════ -->
-<section class="section section-navy" id="trust" aria-labelledby="trust-heading">
-  <div class="container" style="position:relative;z-index:1;">
-    <div class="text-center" data-reveal="fade-up">
-      <span class="section-eyebrow">🛡️ Why Choose Us</span>
-      <h2 class="section-heading" style="color:var(--clr-white);" id="trust-heading">
-        Why 1000+ Businesses Trust Yuva Consultancy
-      </h2>
-      <span class="gold-rule"></span>
-    </div>
-
-    <div class="trust-grid" data-stagger="100">
-      <div class="trust-badge" data-reveal="fade-up">
-        <div class="trust-badge-icon" aria-hidden="true">🏛️</div>
-        <h3 class="h4" style="color:var(--clr-white);">Government Compliance Experts</h3>
-        <p>All registrations fully compliant with Indian government regulations and frameworks.</p>
-      </div>
-      <div class="trust-badge" data-reveal="fade-up">
-        <div class="trust-badge-icon" aria-hidden="true">⚡</div>
-        <h3 class="h4" style="color:var(--clr-white);">Fast Processing</h3>
-        <p>We process applications at lightning speed, ensuring minimal business downtime for you.</p>
-      </div>
-      <div class="trust-badge" data-reveal="fade-up">
-        <div class="trust-badge-icon" aria-hidden="true">👔</div>
-        <h3 class="h4" style="color:var(--clr-white);">Professional Consultants</h3>
-        <p>A team of certified experts with 8+ years of hands-on compliance consulting experience.</p>
-      </div>
-      <div class="trust-badge" data-reveal="fade-up">
-        <div class="trust-badge-icon" aria-hidden="true">⭐</div>
-        <h3 class="h4" style="color:var(--clr-white);">Trusted by Businesses</h3>
-        <p>Recommended by manufacturers, exporters and entrepreneurs across Gujarat and beyond.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════
-     TESTIMONIALS
-══════════════════════════════════════════ -->
-<section class="section section-light" id="testimonials" aria-labelledby="testimonials-heading">
-  <div class="container">
-    <div class="text-center" data-reveal="fade-up">
-      <span class="section-eyebrow">💬 Client Reviews</span>
-      <h2 class="section-heading" id="testimonials-heading">What Our Clients Say</h2>
-      <span class="gold-rule"></span>
-      <p class="section-subheading">Don't just take our word for it — hear from the businesses we've helped succeed.</p>
-    </div>
-
-    <div class="testimonials-grid" data-stagger="120">
-      <article class="testimonial-card" data-reveal="fade-up">
-        <div class="stars" aria-label="5 out of 5 stars">
-          <span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
-        </div>
-        <blockquote class="testimonial-text">
-          "Yuva Consultancy helped me get my IEC registration and FSSAI license within days. Their team is professional, responsive, and very knowledgeable. The process was seamless and stress-free!"
-        </blockquote>
-        <div class="testimonial-author">
-          <div class="avatar avatar-md" aria-hidden="true">RP</div>
-          <div>
-            <div class="author-name">Ramesh Patel</div>
-            <div class="author-role">Food Manufacturer, Surat</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="testimonial-card" data-reveal="fade-up">
-        <div class="stars" aria-label="5 out of 5 stars">
-          <span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
-        </div>
-        <blockquote class="testimonial-text">
-          "I got my Dubai company registered through Yuva Consultancy without traveling at all! The entire international incorporation process was handled expertly from Surat. Exceptional!"
-        </blockquote>
-        <div class="testimonial-author">
-          <div class="avatar avatar-md" aria-hidden="true">MS</div>
-          <div>
-            <div class="author-name">Mihir Shah</div>
-            <div class="author-role">Textile Exporter, Surat</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="testimonial-card" data-reveal="fade-up">
-        <div class="stars" aria-label="5 out of 5 stars">
-          <span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
-        </div>
-        <blockquote class="testimonial-text">
-          "Our ISO 9001 certification was completed faster than any agency we had tried before. Yuva Consultancy's team handles everything with dedication, transparency and complete professionalism."
-        </blockquote>
-        <div class="testimonial-author">
-          <div class="avatar avatar-md" aria-hidden="true">PD</div>
-          <div>
-            <div class="author-name">Paresh Desai</div>
-            <div class="author-role">Manufacturing Director, Surat</div>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════
-     CASE STUDIES
-══════════════════════════════════════════ -->
-<section class="section" id="case-studies" aria-labelledby="cs-heading">
-  <div class="container">
-    <div class="text-center" data-reveal="fade-up">
-      <span class="section-eyebrow">📊 Success Stories</span>
-      <h2 class="section-heading" id="cs-heading">Business Success Stories</h2>
-      <span class="gold-rule"></span>
-      <p class="section-subheading">Real results we've achieved for our clients across industries.</p>
-    </div>
-
-    <div class="case-studies-grid">
-      <div class="case-study-card" data-reveal="fade-left">
-        <div class="case-study-header">
-          <span class="case-study-emoji" aria-hidden="true">🏭</span>
-          <h3>Surat Textile Exporter Goes Global</h3>
-          <p>A mid-sized textile manufacturer wanted to start exporting to Dubai and USA.</p>
-          <div class="case-study-metrics">
-            <div class="metric-item"><div class="m-val">12</div><div class="m-label">Days to IEC</div></div>
-            <div class="metric-item"><div class="m-val">3</div><div class="m-label">Countries Setup</div></div>
-            <div class="metric-item"><div class="m-val">₹2Cr+</div><div class="m-label">First Year Export</div></div>
-          </div>
-        </div>
-        <div class="case-study-body">
-          <div class="case-study-tags">
-            <span class="case-tag">IEC Registration</span>
-            <span class="case-tag">RCMC</span>
-            <span class="case-tag">Dubai Company</span>
-            <span class="case-tag">AD Code</span>
-          </div>
-          <p>We handled IEC registration, RCMC from EEPC, AD Code setup, Port registration at Mundra, and Dubai Freezone company incorporation — all within 21 days.</p>
+      <div class="service-group">
+        <h3>Export Services</h3>
+        <div class="service-grid">
+          <article class="service-mini-card"><div class="icon">🚢</div><h4>IEC Registration</h4><p>Get your import-export code with complete documentation assistance.</p><a href="/import-export-services/" class="service-card-link">Learn More</a></article>
+          <article class="service-mini-card"><div class="icon">📜</div><h4>RCMC Registration</h4><p>Council registration support to unlock export benefits and incentives.</p><a href="/import-export-services/" class="service-card-link">Learn More</a></article>
+          <article class="service-mini-card"><div class="icon">🖥️</div><h4>ICEGATE Registration</h4><p>Digital customs interface setup for seamless trade processing.</p><a href="/import-export-services/" class="service-card-link">Learn More</a></article>
+          <article class="service-mini-card"><div class="icon">🏦</div><h4>AD Code Registration</h4><p>Port-wise AD code activation with compliant banking documentation.</p><a href="/import-export-services/" class="service-card-link">Learn More</a></article>
+          <article class="service-mini-card"><div class="icon">⚓</div><h4>Port Registration</h4><p>Port onboarding support to begin export shipments without delays.</p><a href="/import-export-services/" class="service-card-link">Learn More</a></article>
         </div>
       </div>
 
-      <div class="case-study-card" data-reveal="fade-right">
-        <div class="case-study-header">
-          <span class="case-study-emoji" aria-hidden="true">🍱</span>
-          <h3>Food Startup Achieves ISO Certification</h3>
-          <p>A growing food manufacturing company needed FSSAI + ISO 22000 to enter modern retail.</p>
-          <div class="case-study-metrics">
-            <div class="metric-item"><div class="m-val">7</div><div class="m-label">Days FSSAI</div></div>
-            <div class="metric-item"><div class="m-val">45</div><div class="m-label">Days ISO 22000</div></div>
-            <div class="metric-item"><div class="m-val">5x</div><div class="m-label">Revenue Growth</div></div>
-          </div>
+      <div class="service-group">
+        <h3>Business Services</h3>
+        <div class="service-grid">
+          <article class="service-mini-card"><div class="icon">🍽️</div><h4>FSSAI Registration</h4><p>Licensing for food businesses with fast filing and compliance support.</p><a href="/services/" class="service-card-link">Learn More</a></article>
+          <article class="service-mini-card"><div class="icon">🔏</div><h4>Digital Signature (DSC)</h4><p>Secure signatures for filings, tenders, and statutory submissions.</p><a href="/services/" class="service-card-link">Learn More</a></article>
+          <article class="service-mini-card"><div class="icon">🏆</div><h4>ISO Certification</h4><p>Prepare, document, and certify your quality systems professionally.</p><a href="/iso-certification/" class="service-card-link">Learn More</a></article>
         </div>
-        <div class="case-study-body">
-          <div class="case-study-tags">
-            <span class="case-tag">FSSAI (Central)</span>
-            <span class="case-tag">ISO 22000</span>
-            <span class="case-tag">ISO 9001</span>
-            <span class="case-tag">HACCP</span>
-          </div>
-          <p>We secured Central FSSAI license, documented their full food safety system, and achieved ISO 22000:2018 and ISO 9001:2015 certifications, opening doors to 3 major retail chains.</p>
+      </div>
+
+      <div class="service-group">
+        <h3>Global Company Setup</h3>
+        <div class="service-grid">
+          <article class="service-mini-card"><div class="icon">🇺🇸</div><h4>USA Company Registration</h4><p>Set up your US entity remotely with expert legal structuring support.</p><a href="/international-company-registration/" class="service-card-link">Learn More</a></article>
+          <article class="service-mini-card"><div class="icon">🇬🇧</div><h4>UK Company Registration</h4><p>Register UK companies with compliance-ready setup process.</p><a href="/international-company-registration/" class="service-card-link">Learn More</a></article>
+          <article class="service-mini-card"><div class="icon">🇦🇪</div><h4>Dubai Company Registration</h4><p>Mainland and free-zone registration support for global entrepreneurs.</p><a href="/international-company-registration/" class="service-card-link">Learn More</a></article>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ══════════════════════════════════════════
-     BLOG PREVIEW
-══════════════════════════════════════════ -->
-<section class="section section-light" id="blog" aria-labelledby="blog-heading">
-  <div class="container">
-    <div class="text-center" data-reveal="fade-up">
-      <span class="section-eyebrow">📰 Knowledge Center</span>
-      <h2 class="section-heading" id="blog-heading">Latest Expert Articles</h2>
-      <span class="gold-rule"></span>
-    </div>
-
-    <div class="blog-grid" data-stagger="120">
-      <article class="blog-card" data-reveal="fade-up">
-        <div class="blog-thumb" style="background:linear-gradient(135deg,var(--clr-navy),var(--clr-navy-80));">
-          <span aria-hidden="true">🚢</span>
-          <div class="blog-thumb-inner"></div>
-        </div>
-        <div class="blog-content">
-          <span class="blog-cat">Import-Export</span>
-          <h3 class="blog-title">Complete Guide to IEC Registration in India 2025</h3>
-          <p class="blog-excerpt">Everything about Importer Exporter Code — eligibility, documents, fees and step-by-step DGFT portal process.</p>
-          <div class="blog-meta">
-            <span>Mar 5, 2025</span>
-            <a href="/blog/" class="blog-read-more">Read More →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="blog-card" data-reveal="fade-up">
-        <div class="blog-thumb" style="background:linear-gradient(135deg,#1e3a5f,var(--clr-navy-80));">
-          <span aria-hidden="true">🌍</span>
-          <div class="blog-thumb-inner"></div>
-        </div>
-        <div class="blog-content">
-          <span class="blog-cat">International</span>
-          <h3 class="blog-title">How to Register a Company in Dubai as an Indian Entrepreneur</h3>
-          <p class="blog-excerpt">Dubai offers 0% corporate tax and full ownership. Here's how to set up your UAE company from India in 2025.</p>
-          <div class="blog-meta">
-            <span>Feb 20, 2025</span>
-            <a href="/blog/" class="blog-read-more">Read More →</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="blog-card" data-reveal="fade-up">
-        <div class="blog-thumb" style="background:linear-gradient(135deg,#2d1a44,#1a2d6b);">
-          <span aria-hidden="true">🏆</span>
-          <div class="blog-thumb-inner"></div>
-        </div>
-        <div class="blog-content">
-          <span class="blog-cat">ISO Certification</span>
-          <h3 class="blog-title">Why Every Business Needs ISO 9001 Certification in 2025</h3>
-          <p class="blog-excerpt">ISO 9001 is no longer optional for businesses seeking government contracts or export markets. Discover the process and benefits.</p>
-          <div class="blog-meta">
-            <span>Feb 10, 2025</span>
-            <a href="/blog/" class="blog-read-more">Read More →</a>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <div class="text-center" style="margin-top:var(--sp-10);" data-reveal="fade-up">
-      <a href="/blog/" class="btn btn-outline-gold btn-lg">View All Articles →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════
-     CTA BANNER
-══════════════════════════════════════════ -->
-<section class="cta-banner" aria-labelledby="cta-heading">
-  <div class="container">
-    <div data-reveal="fade-up">
-      <span class="section-eyebrow" style="background:rgba(201,152,42,0.2);color:var(--clr-gold-light);border-color:rgba(201,152,42,0.4);">🚀 Get Started Today</span>
-      <h2 id="cta-heading">Get Free Business Consultation Today</h2>
-      <p>Talk to our experts and get personalised advice on the best strategy for your business registration needs.</p>
-      <div class="cta-btn-group">
-        <a href="tel:+919099665509" class="btn btn-primary btn-xl" id="cta-call-btn">📞 Call Now</a>
-        <a href="#" data-wa class="btn btn-wa btn-xl" id="cta-wa-btn">💬 WhatsApp Chat</a>
-        <a href="/contact/" class="btn btn-outline-white btn-xl">📝 Send Enquiry</a>
+  <section class="section section-light" aria-labelledby="process-heading">
+    <div class="container">
+      <div class="text-center"><span class="section-eyebrow">Simple Process</span><h2 class="section-heading" id="process-heading">From Consultation to Certificate in 4 Steps</h2></div>
+      <div class="timeline-grid" data-stagger="100">
+        <article class="timeline-step" data-reveal="fade-up"><div class="num">1</div><h3>Free Consultation</h3><p>Understand your business case and best registration path.</p></article>
+        <article class="timeline-step" data-reveal="fade-up"><div class="num">2</div><h3>Documentation &amp; Application</h3><p>Collect documents and file correctly in first attempt.</p></article>
+        <article class="timeline-step" data-reveal="fade-up"><div class="num">3</div><h3>Government Processing</h3><p>Track approvals and resolve department queries quickly.</p></article>
+        <article class="timeline-step" data-reveal="fade-up"><div class="num">4</div><h3>Certificate Delivery</h3><p>Receive certificates and onboarding guidance for next steps.</p></article>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section class="section" aria-labelledby="trust-heading">
+    <div class="container">
+      <div class="text-center"><span class="section-eyebrow">Trust &amp; Proof</span><h2 class="section-heading" id="trust-heading">A Consultancy Brand Built on Results</h2></div>
+      <div class="logo-strip" aria-label="Client categories">
+        <div class="logo-pill">Food Brands</div><div class="logo-pill">Exporters</div><div class="logo-pill">Manufacturers</div><div class="logo-pill">Startups</div><div class="logo-pill">SMEs</div>
+      </div>
+      <div class="testimonials-grid" style="margin-top:var(--sp-8)">
+        <article class="testimonial-card"><p>“Their IEC and AD code support was quick and highly professional.”</p><strong>— Rahul, Exporter</strong></article>
+        <article class="testimonial-card"><p>“We got FSSAI and ISO done without delays. Clear communication throughout.”</p><strong>— Meera, Food Business Owner</strong></article>
+        <article class="testimonial-card"><p>“Excellent guidance for Dubai setup and compliance workflow.”</p><strong>— Aakash, Founder</strong></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light" aria-labelledby="why-heading">
+    <div class="container">
+      <div class="text-center"><span class="section-eyebrow">Why Choose Us</span><h2 class="section-heading" id="why-heading">High-Trust Consultancy for Serious Business Growth</h2></div>
+      <div class="why-grid">
+        <article class="why-item"><h3>Fast Processing</h3><p>Faster turnarounds with experienced documentation workflow.</p></article>
+        <article class="why-item"><h3>Expert Consultation</h3><p>Senior advisors guide each case with practical legal clarity.</p></article>
+        <article class="why-item"><h3>Affordable Pricing</h3><p>Transparent and value-focused plans for startups to enterprises.</p></article>
+        <article class="why-item"><h3>Compliance Expertise</h3><p>Accurate filing aligned with current government requirements.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-panel text-center" data-reveal="scale-in">
+        <h2 style="color:#fff">Ready to Start Your Business Registration?</h2>
+        <p style="color:rgba(255,255,255,.85)">Book a free strategy call today and get a clear action plan for your registration.</p>
+        <div class="cta-actions" style="justify-content:center;">
+          <a href="#consultation-form" class="btn btn-primary btn-lg">Book Free Consultation</a>
+          <a href="tel:+919099665509" class="btn btn-call btn-lg">Call Now</a>
+          <a href="#" data-wa class="btn btn-wa btn-lg">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
-<!-- ══════════════════════════════════════════
-     FOOTER
-══════════════════════════════════════════ -->
 <footer class="site-footer" role="contentinfo">
   <div class="container">
     <div class="footer-grid">
-
-      <!-- Brand -->
       <div>
-        <a href="/" class="site-logo" style="margin-bottom:var(--sp-4);">
-          <div class="logo-mark">YC</div>
-          <div class="logo-text-group">
-            <span class="logo-name">Yuva Consultancy</span>
-            <span class="logo-tagline">Business &amp; Compliance Experts</span>
-          </div>
-        </a>
-        <p class="footer-brand-desc">
-          Professional business registration, compliance, and international company setup services. Trusted by 1000+ businesses across India and 20+ countries.
-        </p>
+        <a href="/" class="site-logo" style="margin-bottom:var(--sp-4);"><div class="logo-mark">YC</div><div class="logo-text-group"><span class="logo-name">Yuva Consultancy</span><span class="logo-tagline">Business &amp; Compliance Experts</span></div></a>
+        <p class="footer-brand-desc">Premium consultancy helping Indian and global businesses with export licenses, compliance, and company setup.</p>
         <div class="footer-social" aria-label="Social Media Links">
-          <a href="#" class="social-icon" title="Facebook" aria-label="Facebook">📘</a>
-          <a href="#" class="social-icon" title="Instagram" aria-label="Instagram">📸</a>
-          <a href="#" data-wa class="social-icon" title="WhatsApp" aria-label="WhatsApp">💬</a>
-          <a href="#" class="social-icon" title="LinkedIn" aria-label="LinkedIn">💼</a>
+          <a href="/contact/" class="social-icon" aria-label="Contact us for Facebook">📘</a>
+          <a href="/contact/" class="social-icon" aria-label="Contact us for Instagram">📸</a>
+          <a href="#" data-wa class="social-icon" aria-label="WhatsApp">💬</a>
+          <a href="/contact/" class="social-icon" aria-label="Contact us for LinkedIn">💼</a>
         </div>
       </div>
-
-      <!-- Quick Links -->
+      <div><h3 class="footer-col-title">Quick Links</h3><nav class="footer-links" aria-label="Footer Navigation"><a href="/" class="footer-link">Home</a><a href="/about/" class="footer-link">About</a><a href="/services/" class="footer-link">Services</a><a href="/contact/" class="footer-link">Contact</a></nav></div>
+      <div><h3 class="footer-col-title">Core Services</h3><nav class="footer-links" aria-label="Service Links"><a href="/import-export-services/" class="footer-link">IEC Registration Services</a><a href="/services/" class="footer-link">FSSAI Registration Consultant</a><a href="/iso-certification/" class="footer-link">ISO Certification Services</a><a href="/international-company-registration/" class="footer-link">International Company Registration</a></nav></div>
       <div>
-        <h3 class="footer-col-title">Quick Links</h3>
-        <nav class="footer-links" aria-label="Footer Navigation">
-          <a href="/"           class="footer-link">🏠 Home</a>
-          <a href="/about/"     class="footer-link">🏢 About Us</a>
-          <a href="/services/"  class="footer-link">📋 Services</a>
-          <a href="/international-company-registration/" class="footer-link">🌍 International</a>
-          <a href="/blog/"      class="footer-link">📰 Blog</a>
-          <a href="/contact/"   class="footer-link">📍 Contact</a>
-        </nav>
-      </div>
-
-      <!-- Services -->
-      <div>
-        <h3 class="footer-col-title">Our Services</h3>
-        <nav class="footer-links" aria-label="Services Navigation">
-          <a href="/services/" class="footer-link">🍽️ FSSAI Registration</a>
-          <a href="/services/" class="footer-link">🔏 DSC Signature</a>
-          <a href="/import-export-services/" class="footer-link">🚢 IEC Registration</a>
-          <a href="/services/" class="footer-link">📜 RCMC &amp; ICEGATE</a>
-          <a href="/iso-certification/" class="footer-link">🏆 ISO Certification</a>
-          <a href="/international-company-registration/" class="footer-link">🌎 International Setup</a>
-        </nav>
-      </div>
-
-      <!-- Contact -->
-      <div>
-        <h3 class="footer-col-title">Contact Us</h3>
+        <h3 class="footer-col-title">Contact</h3>
         <address class="footer-contact-list" style="font-style:normal;">
-          <div class="footer-contact-item">
-            <span class="contact-icon">📍</span>
-            <div class="contact-info-text">
-              <span class="info-label">Address</span>
-              <span class="info-val">A-502 Pragati IT Park, Near AR Mall, Mota Varachha, Surat – 394105</span>
-            </div>
-          </div>
-          <div class="footer-contact-item">
-            <span class="contact-icon">📞</span>
-            <div class="contact-info-text">
-              <span class="info-label">Phone</span>
-              <a href="tel:+919099665509" class="info-val">+91 9099665509</a>
-            </div>
-          </div>
-          <div class="footer-contact-item">
-            <span class="contact-icon">✉️</span>
-            <div class="contact-info-text">
-              <span class="info-label">Email</span>
-              <a href="mailto:ronakbhimani6480@gmail.com" class="info-val">ronakbhimani6480@gmail.com</a>
-            </div>
-          </div>
-          <div class="footer-contact-item">
-            <span class="contact-icon">🕐</span>
-            <div class="contact-info-text">
-              <span class="info-label">Business Hours</span>
-              <span class="info-val">Mon–Sat: 9:00 AM – 6:00 PM IST</span>
-            </div>
-          </div>
+          <div class="footer-contact-item"><span class="contact-icon">📍</span><div class="contact-info-text"><span class="info-label">Address</span><span class="info-val">A-502 Pragati IT Park, Surat – 394105</span></div></div>
+          <div class="footer-contact-item"><span class="contact-icon">📞</span><div class="contact-info-text"><span class="info-label">Phone</span><a href="tel:+919099665509" class="info-val">+91 9099665509</a></div></div>
+          <div class="footer-contact-item"><span class="contact-icon">✉️</span><div class="contact-info-text"><span class="info-label">Email</span><a href="mailto:ronakbhimani6480@gmail.com" class="info-val">ronakbhimani6480@gmail.com</a></div></div>
         </address>
       </div>
-
-    </div><!-- /footer-grid -->
-
-    <div class="footer-bottom">
-      <p>© 2025 Yuva Consultancy. All Rights Reserved. Designed with ❤️ in Surat, India.</p>
-      <nav class="footer-legal-links" aria-label="Legal Links">
-        <a href="/contact/">Privacy Policy</a>
-        <a href="/contact/">Terms of Service</a>
-        <a href="/sitemap.xml">Sitemap</a>
-      </nav>
     </div>
+    <div class="footer-bottom"><p>© 2026 Yuva Consultancy. All Rights Reserved.</p></div>
   </div>
 </footer>
 
-<!-- ══════════════════════════════════════════
-     FLOATING BUTTONS
-══════════════════════════════════════════ -->
-<!-- WhatsApp (bottom right) -->
 <div class="float-btn-group-right" aria-label="Quick Contact Buttons">
-  <a href="#" data-wa class="float-action-btn float-wa-btn" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
-    <span class="float-label" aria-hidden="true">Chat on WhatsApp</span>
-    💬
-  </a>
+  <a href="#" data-wa class="float-action-btn float-wa-btn" title="Chat on WhatsApp" aria-label="Chat on WhatsApp"><span class="float-label" aria-hidden="true">WhatsApp</span>💬</a>
+</div>
+<div class="float-btn-group-left" aria-label="Quick Call Button">
+  <a href="tel:+919099665509" class="float-action-btn float-call-btn left" title="Call Now" aria-label="Call Yuva Consultancy"><span class="float-label" aria-hidden="true">Call Now</span>📞</a>
 </div>
 
-<!-- Call (bottom left) -->
-<div class="float-btn-group-left">
-  <a href="tel:+919099665509" class="float-action-btn float-call-btn left" title="Call Now" aria-label="Call Yuva Consultancy">
-    <span class="float-label" aria-hidden="true">Call Now</span>
-    📞
-  </a>
-</div>
-
-<!-- ══════════════════════════════════════════
-     JAVASCRIPT (defer for performance)
-══════════════════════════════════════════ -->
-<script src="assets/js/core.js"       defer></script>
+<script src="assets/js/core.js" defer></script>
 <script src="assets/js/animations.js" defer></script>
-<script src="assets/js/counter.js"    defer></script>
-<script src="assets/js/forms.js"      defer></script>
-<script src="assets/js/wa.js"         defer></script>
-
+<script src="assets/js/counter.js" defer></script>
+<script src="assets/js/forms.js" defer></script>
+<script src="assets/js/wa.js" defer></script>
 </body>
 </html>

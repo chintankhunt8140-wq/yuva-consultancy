@@ -1,11 +1,9 @@
 /**
  * core.js — Header Scroll, Mobile Nav, Active Links, Smooth Scroll
- * Yuva Consultancy Production Website
  */
 
 'use strict';
 
-/* ── Header Scroll Shrink ───────────────────────────────── */
 (function initHeaderScroll() {
   const header = document.querySelector('.site-header');
   if (!header) return;
@@ -15,70 +13,93 @@
   };
 
   window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll(); // run once on load
+  onScroll();
 })();
 
-/* ── Scroll Progress Bar ────────────────────────────────── */
 (function initScrollProgress() {
   const bar = document.getElementById('scroll-progress');
   if (!bar) return;
 
   window.addEventListener('scroll', () => {
     const total = document.documentElement.scrollHeight - window.innerHeight;
-    const pct   = total > 0 ? window.scrollY / total : 0;
+    const pct = total > 0 ? window.scrollY / total : 0;
     bar.style.transform = `scaleX(${pct})`;
   }, { passive: true });
 })();
 
-/* ── Mobile Navigation ──────────────────────────────────── */
 (function initMobileNav() {
-  const btn  = document.getElementById('hamburger-btn');
-  const nav  = document.getElementById('mobile-nav');
+  const btn = document.getElementById('hamburger-btn');
+  const nav = document.getElementById('mobile-nav');
   const body = document.body;
   if (!btn || !nav) return;
 
-  const open  = () => { btn.setAttribute('aria-expanded', 'true');  nav.classList.add('open');    body.style.overflow = 'hidden'; };
-  const close = () => { btn.setAttribute('aria-expanded', 'false'); nav.classList.remove('open'); body.style.overflow = ''; };
-  const toggle= () => btn.getAttribute('aria-expanded') === 'true' ? close() : open();
+  const focusableSelector = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
+  const open = () => {
+    btn.setAttribute('aria-expanded', 'true');
+    nav.classList.add('open');
+    nav.removeAttribute('inert');
+    body.style.overflow = 'hidden';
+    const first = nav.querySelector(focusableSelector);
+    if (first) first.focus();
+  };
+
+  const close = () => {
+    btn.setAttribute('aria-expanded', 'false');
+    nav.classList.remove('open');
+    nav.setAttribute('inert', '');
+    body.style.overflow = '';
+    btn.focus();
+  };
+
+  const isOpen = () => btn.getAttribute('aria-expanded') === 'true';
+  const toggle = () => (isOpen() ? close() : open());
+
+  nav.setAttribute('inert', '');
   btn.addEventListener('click', toggle);
+  nav.querySelectorAll('a').forEach((a) => a.addEventListener('click', close));
 
-  // Close when a link is clicked
-  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isOpen()) close();
+    if (e.key === 'Tab' && isOpen()) {
+      const focusables = Array.from(nav.querySelectorAll(focusableSelector));
+      if (!focusables.length) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  });
 
-  // Close on ESC
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
-
-  // Close on outside click
-  document.addEventListener('click', e => {
-    if (!btn.contains(e.target) && !nav.contains(e.target)) close();
+  document.addEventListener('click', (e) => {
+    if (isOpen() && !btn.contains(e.target) && !nav.contains(e.target)) close();
   });
 })();
 
-/* ── Active Nav Link Detection ──────────────────────────── */
 (function setActiveNav() {
-  // Resolve current page slug
   const parts = window.location.pathname.replace(/\/$/, '').split('/').filter(Boolean);
-  const slug  = parts.length > 0 ? parts[parts.length - 1] : '';
+  const slug = parts.length > 0 ? parts[parts.length - 1] : '';
 
-  document.querySelectorAll('[data-nav-link]').forEach(link => {
-    const href   = link.getAttribute('href') || '';
+  document.querySelectorAll('[data-nav-link]').forEach((link) => {
+    const href = link.getAttribute('href') || '';
     const target = href.replace(/\/$/, '').split('/').filter(Boolean).pop() || '';
 
-    if (
-      (slug === '' && (href === '/' || href === '/index.html' || target === ''))
-      || (slug !== '' && target === slug)
-    ) {
+    if ((slug === '' && (href === '/' || href === '/index.html' || target === '')) || (slug !== '' && target === slug)) {
       link.classList.add('active');
     }
   });
 })();
 
-/* ── Smooth Scroll for Anchor Links ─────────────────────── */
 (function initSmoothScroll() {
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', e => {
-      const id     = anchor.getAttribute('href').slice(1);
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', (e) => {
+      const id = anchor.getAttribute('href').slice(1);
+      if (!id) return;
       const target = document.getElementById(id);
       if (!target) return;
       e.preventDefault();
@@ -88,8 +109,18 @@
   });
 })();
 
-/* ── Toast Notification (global helper) ─────────────────── */
-window.showToast = function(message, type = 'success', duration = 3500) {
+
+(function initMobileStickyCta() {
+  const bar = document.createElement('div');
+  bar.className = 'mobile-sticky-cta';
+  bar.innerHTML = `
+    <a href="tel:+919099665509" class="mobile-sticky-btn mobile-sticky-call" aria-label="Call Yuva Consultancy">📞 Call</a>
+    <a href="#" data-wa class="mobile-sticky-btn mobile-sticky-wa" aria-label="Chat on WhatsApp">💬 WhatsApp</a>
+  `;
+  document.body.appendChild(bar);
+})();
+
+window.showToast = function showToast(message, type = 'success', duration = 3500) {
   let toast = document.getElementById('site-toast');
   if (!toast) {
     toast = document.createElement('div');
@@ -98,6 +129,7 @@ window.showToast = function(message, type = 'success', duration = 3500) {
     document.body.appendChild(toast);
   }
   toast.textContent = message;
+  toast.dataset.type = type;
   toast.classList.add('show');
   clearTimeout(toast._timer);
   toast._timer = setTimeout(() => toast.classList.remove('show'), duration);

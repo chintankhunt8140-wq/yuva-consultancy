@@ -654,3 +654,32 @@ select.form-control {
 *:focus:not(:focus-visible) {
   outline: none;
 }
+
+/* Mobile sticky conversion bar */
+.mobile-sticky-cta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: calc(var(--z-toast) - 1);
+  display: none;
+  gap: var(--sp-2);
+  padding: var(--sp-3);
+  padding-bottom: calc(var(--sp-3) + env(safe-area-inset-bottom));
+  background: rgba(10, 31, 78, 0.96);
+  backdrop-filter: blur(8px);
+}
+
+.mobile-sticky-btn {
+  flex: 1;
+  min-height: 48px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--fw-semibold);
+  color: var(--clr-white);
+}
+
+.mobile-sticky-call { background: var(--clr-gold-dark); }
+.mobile-sticky-wa { background: #1fae58; }
