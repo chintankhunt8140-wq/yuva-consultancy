@@ -1,5 +1,5 @@
 /* ============================================================
-   header.css — Sticky Glassmorphism Header + Mobile Nav
+   header.css — Sticky Header with White Background + Navy Text
    ============================================================ */
 
 /* === Site Header === */
@@ -8,20 +8,21 @@
   top: 0; left: 0; right: 0;
   z-index: var(--z-sticky);
   height: var(--header-h);
-  background: rgba(7, 20, 57, 0.92);
+  background: var(--clr-white);
   backdrop-filter: var(--blur-lg);
   -webkit-backdrop-filter: var(--blur-lg);
-  border-bottom: 1px solid rgba(201,152,42,0.18);
+  border-bottom: 1px solid var(--clr-gray-200);
   transition: height var(--dur-normal) var(--ease-inout),
               background var(--dur-normal),
               box-shadow var(--dur-normal);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .site-header.scrolled {
   height: var(--header-h-sm);
-  background: rgba(4, 13, 36, 0.97);
-  box-shadow: 0 4px 32px rgba(0,0,0,0.4);
-  border-bottom-color: rgba(201,152,42,0.12);
+  background: var(--clr-white);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  border-bottom-color: var(--clr-gray-200);
 }
 
 .header-inner {
@@ -36,43 +37,38 @@
 .site-logo {
   display: flex;
   align-items: center;
-  gap: var(--sp-3);
   text-decoration: none;
   flex-shrink: 0;
-  transition: opacity var(--dur-fast);
+  transition: opacity var(--dur-fast), transform var(--dur-normal) var(--ease-spring);
 }
-.site-logo:hover { opacity: 0.9; }
+.site-logo:hover { 
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
 
-.logo-mark {
-  width: 46px; height: 46px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, var(--clr-gold) 0%, var(--clr-gold-dark) 100%);
-  display: flex; align-items: center; justify-content: center;
-  font-size: var(--fs-lg);
-  font-weight: var(--fw-black);
-  color: var(--clr-white);
-  letter-spacing: -1.5px;
-  box-shadow: 0 4px 16px rgba(201,152,42,0.4);
-  flex-shrink: 0;
-  transition: transform var(--dur-normal) var(--ease-spring);
+.logo-text-group {
+  display: flex;
+  align-items: center;
 }
-.site-logo:hover .logo-mark { transform: rotate(-3deg) scale(1.05); }
 
-.logo-text-group .logo-name {
-  font-size: var(--fs-md);
-  font-weight: var(--fw-extrabold);
-  color: var(--clr-white);
-  line-height: 1.1;
-  letter-spacing: 0.01em;
+.logo-text-group img {
+  height: 50px;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
-.logo-text-group .logo-tagline {
-  font-size: var(--fs-xs);
-  color: rgba(201,152,42,0.85);
-  letter-spacing: var(--ls-widest);
-  text-transform: uppercase;
-  font-weight: var(--fw-medium);
-  line-height: 1;
-  margin-top: 2px;
+
+/* Responsive logo sizing */
+@media (max-width: 768px) {
+  .logo-text-group img {
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text-group img {
+    height: 36px;
+  }
 }
 
 /* === Desktop Navigation === */
@@ -88,7 +84,7 @@
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  color: rgba(255,255,255,0.78);
+  color: var(--clr-navy-deeper);
   font-size: var(--fs-sm);
   font-weight: var(--fw-medium);
   padding: var(--sp-2) var(--sp-3);
@@ -107,8 +103,8 @@
   transition: transform var(--dur-normal) var(--ease-spring);
 }
 .nav-link:hover, .nav-link.active {
-  color: var(--clr-gold-light);
-  background: rgba(201,152,42,0.1);
+  color: var(--clr-gold-dark);
+  background: rgba(212,165,50,0.1);
 }
 .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
 
@@ -122,10 +118,10 @@
 
 .header-call-btn {
   display: flex; align-items: center; gap: 7px;
-  color: rgba(255,255,255,0.88);
+  color: var(--clr-navy-deeper);
   font-size: var(--fs-sm); font-weight: var(--fw-semibold);
   padding: 9px 16px;
-  border: 1.5px solid rgba(255,255,255,0.2);
+  border: 1.5px solid var(--clr-gray-300);
   border-radius: var(--radius-full);
   transition: var(--transition);
   white-space: nowrap;
@@ -133,8 +129,8 @@
 }
 .header-call-btn:hover {
   border-color: var(--clr-gold);
-  color: var(--clr-gold-light);
-  background: rgba(201,152,42,0.1);
+  color: var(--clr-gold-dark);
+  background: rgba(212,165,50,0.1);
 }
 
 .header-wa-btn {
@@ -166,12 +162,12 @@
   border-radius: var(--radius-sm);
   transition: background var(--dur-fast);
 }
-.hamburger-btn:hover { background: rgba(255,255,255,0.08); }
+.hamburger-btn:hover { background: rgba(4,13,36,0.08); }
 
 .hamburger-line {
   display: block;
   width: 24px; height: 2px;
-  background: var(--clr-white);
+  background: var(--clr-navy-deeper);
   border-radius: 2px;
   transition: transform var(--dur-normal) var(--ease-inout),
               opacity var(--dur-normal),
@@ -194,10 +190,10 @@
   position: fixed;
   top: var(--header-h);
   left: 0; right: 0;
-  background: rgba(4,13,36,0.98);
+  background: var(--clr-white);
   backdrop-filter: var(--blur-xl);
   -webkit-backdrop-filter: var(--blur-xl);
-  border-top: 1px solid rgba(201,152,42,0.15);
+  border-top: 1px solid var(--clr-gray-200);
   padding: var(--sp-4) var(--sp-6) var(--sp-8);
   z-index: calc(var(--z-sticky) - 1);
   transform: translateY(-8px);
@@ -207,6 +203,7 @@
               opacity var(--dur-normal);
   max-height: calc(100vh - var(--header-h));
   overflow-y: auto;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
 }
 .mobile-nav.open {
   transform: translateY(0);
@@ -216,16 +213,16 @@
 
 .mobile-nav-link {
   display: flex; align-items: center; gap: var(--sp-3);
-  color: rgba(255,255,255,0.82);
+  color: var(--clr-navy-deeper);
   font-size: var(--fs-md);
   font-weight: var(--fw-medium);
   padding: 14px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid var(--clr-gray-100);
   text-decoration: none;
   transition: color var(--dur-fast), padding-left var(--dur-fast);
 }
 .mobile-nav-link:hover, .mobile-nav-link.active {
-  color: var(--clr-gold-light);
+  color: var(--clr-gold-dark);
   padding-left: var(--sp-2);
 }
 .mobile-nav-link:last-child { border-bottom: none; }
@@ -236,5 +233,5 @@
   gap: var(--sp-3);
   margin-top: var(--sp-6);
   padding-top: var(--sp-4);
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid var(--clr-gray-200);
 }

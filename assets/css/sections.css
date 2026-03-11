@@ -552,3 +552,174 @@
   margin-bottom: var(--sp-4);
   letter-spacing: var(--ls-wide);
 }
+
+/* ============================================================
+   LOGO FIX - Additional CSS for Footer
+   Add this to your sections.css file
+   ============================================================ */
+
+/* Footer Logo Styling */
+.site-footer .site-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: opacity var(--dur-fast);
+}
+
+.site-footer .site-logo:hover {
+  opacity: 0.9;
+}
+
+.site-footer .logo-text-group {
+  display: flex;
+  align-items: center;
+}
+
+.site-footer .logo-text-group img {
+  height: 45px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* Makes logo white for dark footer */
+}
+
+/* If you want to keep the original logo colors in footer, remove the filter line above */
+
+/* Mobile Footer Logo */
+@media (max-width: 768px) {
+  .site-footer .logo-text-group img {
+    height: 38px;
+  }
+}
+
+/* ============================================================
+   STATS SECTION - Modern Card Style (Like Reference Image)
+   Add this to your sections.css or create new stats.css
+   ============================================================ */
+
+/* Stats Section Container */
+.stats-section {
+  padding: var(--sp-16) 0;
+  background: var(--clr-off-white);
+  position: relative;
+}
+
+/* Stats Grid - 4 columns */
+.stats-grid-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-6);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--sp-6);
+}
+
+/* Individual Stat Card */
+.stat-card {
+  background: var(--clr-white);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-10) var(--sp-6);
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: all var(--dur-normal) var(--ease-spring);
+  border: 1px solid var(--clr-gray-100);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Effect */
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  border-color: rgba(201, 152, 42, 0.2);
+}
+
+/* Gold top border on hover */
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--clr-gold), var(--clr-gold-bright));
+  transform: scaleX(0);
+  transition: transform var(--dur-normal) var(--ease-out);
+}
+
+.stat-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Stat Number - Large Gold Number */
+.stat-number {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: var(--fw-black);
+  font-family: var(--font-display);
+  color: var(--clr-gold);
+  line-height: 1;
+  margin-bottom: var(--sp-3);
+  display: block;
+  letter-spacing: -0.02em;
+}
+
+/* Stat Label - Gray Text Below */
+.stat-label {
+  font-size: var(--fs-base);
+  color: var(--clr-gray-600);
+  font-weight: var(--fw-medium);
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .stats-grid-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-5);
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-grid-cards {
+    grid-template-columns: 1fr;
+    gap: var(--sp-4);
+  }
+  
+  .stat-card {
+    padding: var(--sp-8) var(--sp-5);
+  }
+  
+  .stat-number {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+  }
+  
+  .stat-label {
+    font-size: var(--fs-sm);
+  }
+}
+
+/* Alternative: Centered Section with Title */
+.stats-section-centered {
+  padding: var(--sp-20) 0;
+  background: var(--clr-off-white);
+}
+
+.stats-section-title {
+  text-align: center;
+  margin-bottom: var(--sp-12);
+}
+
+.stats-section-title h2 {
+  font-size: var(--fs-3xl);
+  color: var(--clr-navy-deeper);
+  margin-bottom: var(--sp-3);
+  font-family: var(--font-display);
+}
+
+.stats-section-title p {
+  font-size: var(--fs-lg);
+  color: var(--clr-gray-500);
+  max-width: 600px;
+  margin: 0 auto;
+}
